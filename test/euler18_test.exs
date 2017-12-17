@@ -19,4 +19,13 @@ defmodule Euler18Test do
     assert Euler18.find_max_sum(triangle) == 4
   end
 
+  test "two rows triangle (max in inverse order)" do
+    triangle = [
+      [1],
+      [3, 2]
+    ]
+
+    assert Euler18.find_max_sum(triangle) == 4
+  end
+
 end
