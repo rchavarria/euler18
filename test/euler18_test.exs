@@ -28,4 +28,14 @@ defmodule Euler18Test do
     assert Euler18.find_max_sum(triangle) == 4
   end
 
+  test "three rows triangle" do
+    triangle = [
+      [1],
+      [2, 3],
+      [4, 5, 6]
+    ]
+
+    assert Euler18.find_max_sum(triangle) == 10
+  end
+
 end
