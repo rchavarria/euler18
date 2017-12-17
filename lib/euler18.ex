@@ -1,18 +1,6 @@
 defmodule Euler18 do
-  @moduledoc """
-  Documentation for Euler18.
-  """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Euler18.hello
-      :world
-
-  """
-  def hello do
+  def find_max_sum([]), do: 0
+  def find_max_sum(rows) do
     :world
   end
 end
