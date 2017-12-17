@@ -1,21 +1,31 @@
 # Euler18
 
-**TODO: Add description**
+Este repo propone una solución al problema propuesto por [Gonzalo en su blog], expuesto en el [Proyecto Euler].
 
-## Installation
+El problema, básicamente, es que partimos de un triángulo o pirámide de números, y debemos hallar la máxima suma de los números, cogiendo un número de cada *piso*. Los números deben estar *tocándose*. Mejor viendo un ejemplo:
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `euler18` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:euler18, "~> 0.1.0"}
-  ]
-end
+```
+        13
+      54  30
+    21  07  39
+  14  44  23  45
+24  43  16  17  22
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/euler18](https://hexdocs.pm/euler18).
+Empezando desde el `13`, la mayor suma sería: `13 + 54 + 21 + 44 + 43 = 175`
+
+# Ejecutar los tests
+
+Este es un proyecto elixir creado con `mix`, así que, ejecuta el comando `mix test` para ver cómo pasan (o fallan) los tests.
+
+# Referencias
+
+- [Gonzalo] en twitetr
+- [Blog de Gonzalo]
+- [Proyecto Euler]
+
+[Gonzalo en su blog]: http://www.tinselcity.net/book/aprendizaje/ejercicios/euler18
+[Proyect Euler]: https://projecteuler.net/
+[Gonzalo]: https://lapartequefalta.com/
+[Blog de Gonzalo]: http://www.tinselcity.net/
 
