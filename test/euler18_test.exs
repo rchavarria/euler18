@@ -4,7 +4,7 @@ defmodule Euler18Test do
 
   #@tag :pending
   test "empty triangle sums zero" do
-    assert Euler18.find_max_sum([[]]) == 0
+    assert Euler18.find_max_sum([]) == 0
   end
 
   #@tag :pending
