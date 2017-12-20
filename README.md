@@ -27,7 +27,7 @@ Este es un proyecto elixir creado con `mix`, así que, ejecuta el comando `mix t
 - [Proyecto Euler]
 
 [Gonzalo en su blog]: http://www.tinselcity.net/book/aprendizaje/ejercicios/euler18
-[Proyect Euler]: https://projecteuler.net/
+[Proyecto Euler]: https://projecteuler.net/
 [enviadas]: mailto:kflynn@lpqf.net?subject=[ejercicio]Euler18
 [aquí]: http://www.tinselcity.net/book/aprendizaje/soluciones/euler18
 [Gonzalo]: https://lapartequefalta.com/
