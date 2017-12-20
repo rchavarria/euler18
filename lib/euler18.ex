@@ -1,5 +1,6 @@
 defmodule Euler18 do
 
+  def find_max_sum([]), do: 0
   def find_max_sum(piramid) do
     reversed_sum(piramid |> Enum.reverse(), [])
   end
