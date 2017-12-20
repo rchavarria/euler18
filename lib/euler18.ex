@@ -9,9 +9,7 @@ defmodule Euler18 do
   end
 
   defp sum([], previous_row), do: previous_row |> at(0)
-  defp sum(piramid, previous_row) do
-    [ current_row | rows ] = piramid
-
+  defp sum([ current_row | rows ], previous_row) do
     next_row = merge_rows(current_row, previous_row)
     sum(rows, next_row)
   end
