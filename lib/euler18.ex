@@ -2,21 +2,21 @@ defmodule Euler18 do
 
   def find_max_sum([]), do: 0
   def find_max_sum(piramid) do
-    reversed_sum(piramid |> Enum.reverse(), [])
+    sum(piramid |> Enum.reverse(), [])
   end
 
-  defp reversed_sum([], previous_row), do: previous_row |> Enum.at(0)
-  defp reversed_sum(piramid, previous_row) do
+  defp sum([], previous_row), do: previous_row |> Enum.at(0)
+  defp sum(piramid, previous_row) do
     [ current_row | rows ] = piramid
 
-    next_row = recurse_in_parallel(current_row, previous_row)
-    reversed_sum(rows, next_row)
+    next_row = merge_rows(current_row, previous_row)
+    sum(rows, next_row)
   end
 
-  defp recurse_in_parallel([], _previous_row), do: []
-  defp recurse_in_parallel([ current_element | current_row ], previous_row) do
+  defp merge_rows([], _previous_row), do: []
+  defp merge_rows([ i | current_row ], previous_row) do
     max = previous_row |> max_of_first_two()
-    [ current_element + max | recurse_in_parallel(current_row, previous_row |> Enum.drop(1)) ]
+    [ i + max | merge_rows(current_row, previous_row |> Enum.drop(1)) ]
   end
 
   defp max_of_first_two([]), do: 0
