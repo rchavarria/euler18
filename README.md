@@ -22,7 +22,7 @@ Este es un proyecto elixir creado con `mix`, así que, ejecuta el comando `mix t
 
 # Referencias
 
-- [Gonzalo] en twitetr
+- [Gonzalo] en twitter
 - [Blog de Gonzalo]
 - [Proyecto Euler]
 
