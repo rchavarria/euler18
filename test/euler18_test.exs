@@ -2,17 +2,17 @@ defmodule Euler18Test do
   use ExUnit.Case
   doctest Euler18
 
-  #@tag :pending
+  @tag :pending
   test "empty triangle sums zero" do
     assert Euler18.find_max_sum([]) == 0
   end
 
-  #@tag :pending
+  @tag :pending
   test "one row triangle" do
     assert Euler18.find_max_sum([ [1234] ]) == 1234
   end
 
-  #@tag :pending
+  @tag :pending
   test "two rows triangle" do
     triangle = [
       [1],
@@ -22,7 +22,7 @@ defmodule Euler18Test do
     assert Euler18.find_max_sum(triangle) == 4
   end
 
-  #@tag :pending
+  @tag :pending
   test "two rows triangle (max in inverse order)" do
     triangle = [
       [1],
@@ -32,7 +32,7 @@ defmodule Euler18Test do
     assert Euler18.find_max_sum(triangle) == 4
   end
 
-  #@tag :pending
+  @tag :pending
   test "three rows triangle" do
     triangle = [
       [1],
@@ -43,7 +43,7 @@ defmodule Euler18Test do
     assert Euler18.find_max_sum(triangle) == 10
   end
 
-  #@tag :pending
+  @tag :pending
   test "three rows triangle (not descending order)" do
     triangle = [
       [1],
@@ -54,7 +54,7 @@ defmodule Euler18Test do
     assert Euler18.find_max_sum(triangle) == 1 + 3 + 5
   end
 
-  #@tag :pending
+  @tag :pending
   test "3 + 7 + 4 + 9 = 23" do
     triangle = [
       [3],
@@ -66,7 +66,7 @@ defmodule Euler18Test do
     assert Euler18.find_max_sum(triangle) == 23
   end
 
-  #@tag :pending
+  @tag :pending
   test "13 + 54 + 21 + 44 + 43 = 175" do
     triangle = [
       [13],
@@ -80,6 +80,17 @@ defmodule Euler18Test do
   end
 
   #@tag :pending
+  test "Try from bottom to top" do
+    triangle = [
+      [5],
+      [50, 6],
+      [1, 9, 99]
+    ]
+
+    assert Euler18.find_max_sum(triangle) == 5 + 6 + 99
+  end
+
+  @tag :pending
   test "Definitive test" do
     triangle = [
       [75],
