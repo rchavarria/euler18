@@ -8,16 +8,15 @@ defmodule Euler18 do
     sum(piramid |> reverse(), [])
   end
 
-  defp sum([], previous_row), do: previous_row |> at(0)
-  defp sum([ current_row | rows ], previous_row) do
-    next_row = merge_rows(current_row, previous_row)
-    sum(rows, next_row)
+  defp sum([], accumulator), do: accumulator |> at(0)
+  defp sum([ current_row | rows ], accumulator) do
+    sum(rows, merge_rows(current_row, accumulator))
   end
 
-  defp merge_rows([], _previous_row), do: []
-  defp merge_rows([ i | current_row ], previous_row) do
-    max = previous_row |> max_of_first_two()
-    [ i + max | merge_rows(current_row, previous_row |> drop(1)) ]
+  defp merge_rows([], _accumulator), do: []
+  defp merge_rows([ i | current_row ], accumulator) do
+    max = accumulator |> max_of_first_two()
+    [ i + max | merge_rows(current_row, accumulator |> drop(1)) ]
   end
 
   defp max_of_first_two([]), do: 0
